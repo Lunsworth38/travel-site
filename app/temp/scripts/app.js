@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -10689,148 +10689,6 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
-
-var _MobileMenu = __webpack_require__(4);
-
-var _MobileMenu2 = _interopRequireDefault(_MobileMenu);
-
-var _RevealOnScroll = __webpack_require__(5);
-
-var _RevealOnScroll2 = _interopRequireDefault(_RevealOnScroll);
-
-var _jQuery = __webpack_require__(6);
-
-var _jQuery2 = _interopRequireDefault(_jQuery);
-
-var _StickyHeader = __webpack_require__(7);
-
-var _StickyHeader2 = _interopRequireDefault(_StickyHeader);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var mobileMenu = new _MobileMenu2.default();
-new _RevealOnScroll2.default((0, _jQuery2.default)(".feature-item"), "85%");
-new _RevealOnScroll2.default((0, _jQuery2.default)(".testimonial"), "70%");
-var stickyHeader = new _StickyHeader2.default();
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var MobileMenu = function () {
-	function MobileMenu() {
-		_classCallCheck(this, MobileMenu);
-
-		this.siteHeader = (0, _jquery2.default)(".site-header");
-		this.menuIcon = (0, _jquery2.default)(".site-header__menu-icon");
-		this.menuContent = (0, _jquery2.default)(".site-header__menu-content");
-		this.events();
-	}
-
-	_createClass(MobileMenu, [{
-		key: "events",
-		value: function events() {
-			this.menuIcon.click(this.toggleTheMenu.bind(this));
-		}
-	}, {
-		key: "toggleTheMenu",
-		value: function toggleTheMenu() {
-			this.menuContent.toggleClass("site-header__menu-content--is-visible");
-			this.siteHeader.toggleClass("site-header--is-expanded");
-			this.menuIcon.toggleClass("site-header__menu-icon--close-x");
-		}
-	}]);
-
-	return MobileMenu;
-}();
-
-exports.default = MobileMenu;
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-var _noframework = __webpack_require__(2);
-
-var _noframework2 = _interopRequireDefault(_noframework);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var RevealOnScroll = function () {
-	function RevealOnScroll(els, offset) {
-		_classCallCheck(this, RevealOnScroll);
-
-		this.itemsToReveal = els;
-		this.hideInitially();
-		this.offsetPercentage = offset;
-		this.createWaypoints();
-	}
-
-	_createClass(RevealOnScroll, [{
-		key: "hideInitially",
-		value: function hideInitially() {
-			this.itemsToReveal.addClass("reveal-item");
-		}
-	}, {
-		key: "createWaypoints",
-		value: function createWaypoints() {
-			var that = this;
-			this.itemsToReveal.each(function () {
-				var currentItem = this;
-				new Waypoint({
-					element: currentItem,
-					handler: function handler() {
-						(0, _jquery2.default)(currentItem).addClass("reveal-item--is-visible");
-					},
-					offset: that.offsetPercentage
-				});
-			});
-		}
-	}]);
-
-	return RevealOnScroll;
-}();
-
-exports.default = RevealOnScroll;
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -20663,6 +20521,153 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
 
 /***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _MobileMenu = __webpack_require__(5);
+
+var _MobileMenu2 = _interopRequireDefault(_MobileMenu);
+
+var _RevealOnScroll = __webpack_require__(6);
+
+var _RevealOnScroll2 = _interopRequireDefault(_RevealOnScroll);
+
+var _jQuery = __webpack_require__(3);
+
+var _jQuery2 = _interopRequireDefault(_jQuery);
+
+var _StickyHeader = __webpack_require__(7);
+
+var _StickyHeader2 = _interopRequireDefault(_StickyHeader);
+
+var _Modal = __webpack_require__(9);
+
+var _Modal2 = _interopRequireDefault(_Modal);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var mobileMenu = new _MobileMenu2.default();
+new _RevealOnScroll2.default((0, _jQuery2.default)(".feature-item"), "85%");
+new _RevealOnScroll2.default((0, _jQuery2.default)(".testimonial"), "70%");
+var stickyHeader = new _StickyHeader2.default();
+var modal = new _Modal2.default();
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var MobileMenu = function () {
+	function MobileMenu() {
+		_classCallCheck(this, MobileMenu);
+
+		this.siteHeader = (0, _jquery2.default)(".site-header");
+		this.menuIcon = (0, _jquery2.default)(".site-header__menu-icon");
+		this.menuContent = (0, _jquery2.default)(".site-header__menu-content");
+		this.events();
+	}
+
+	_createClass(MobileMenu, [{
+		key: "events",
+		value: function events() {
+			this.menuIcon.click(this.toggleTheMenu.bind(this));
+		}
+	}, {
+		key: "toggleTheMenu",
+		value: function toggleTheMenu() {
+			this.menuContent.toggleClass("site-header__menu-content--is-visible");
+			this.siteHeader.toggleClass("site-header--is-expanded");
+			this.menuIcon.toggleClass("site-header__menu-icon--close-x");
+		}
+	}]);
+
+	return MobileMenu;
+}();
+
+exports.default = MobileMenu;
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _noframework = __webpack_require__(2);
+
+var _noframework2 = _interopRequireDefault(_noframework);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var RevealOnScroll = function () {
+	function RevealOnScroll(els, offset) {
+		_classCallCheck(this, RevealOnScroll);
+
+		this.itemsToReveal = els;
+		this.hideInitially();
+		this.offsetPercentage = offset;
+		this.createWaypoints();
+	}
+
+	_createClass(RevealOnScroll, [{
+		key: "hideInitially",
+		value: function hideInitially() {
+			this.itemsToReveal.addClass("reveal-item");
+		}
+	}, {
+		key: "createWaypoints",
+		value: function createWaypoints() {
+			var that = this;
+			this.itemsToReveal.each(function () {
+				var currentItem = this;
+				new Waypoint({
+					element: currentItem,
+					handler: function handler() {
+						(0, _jquery2.default)(currentItem).addClass("reveal-item--is-visible");
+					},
+					offset: that.offsetPercentage
+				});
+			});
+		}
+	}]);
+
+	return RevealOnScroll;
+}();
+
+exports.default = RevealOnScroll;
+
+/***/ }),
 /* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -21123,6 +21128,73 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
   // default options
   $.fn.smoothScroll.defaults = defaults;
 });
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jQuery = __webpack_require__(3);
+
+var _jQuery2 = _interopRequireDefault(_jQuery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Modal = function () {
+	function Modal() {
+		_classCallCheck(this, Modal);
+
+		this.openModalButton = (0, _jQuery2.default)(".open-modal");
+		this.modal = (0, _jQuery2.default)(".modal");
+		this.closeModalButton = (0, _jQuery2.default)(".modal__close");
+		this.events();
+	}
+
+	_createClass(Modal, [{
+		key: "events",
+		value: function events() {
+			//clicking the open modal button
+			this.openModalButton.click(this.openModal.bind(this));
+
+			//clicking the x close modal button
+			this.closeModalButton.click(this.closeModal.bind(this));
+			//pushes any key
+			(0, _jQuery2.default)(document).keyup(this.keyPressHandler.bind(this));
+		}
+	}, {
+		key: "keyPressHandler",
+		value: function keyPressHandler(e) {
+			if (e.keyCode == 27) {
+				this.closeModal();
+			}
+		}
+	}, {
+		key: "openModal",
+		value: function openModal() {
+			this.modal.addClass("modal--is-visible");
+			return false;
+		}
+	}, {
+		key: "closeModal",
+		value: function closeModal() {
+			this.modal.removeClass("modal--is-visible");
+		}
+	}]);
+
+	return Modal;
+}();
+
+exports.default = Modal;
 
 /***/ })
 /******/ ]);
