@@ -1274,17 +1274,12 @@ Instead edit gulp/templates/sprite */
 			-webkit-transform: translateX(0);
 			        transform: translateX(0)
 	}
-
+			
 			.site-header--dark .site-header__logo {
-<<<<<<< HEAD
-				-webkit-transform: scale(.56);
-				        transform: scale(.56);
-=======
-				-webkit-transform: scale(.55
-					);
-				        transform: scale(.55
-					);
->>>>>>> browser-support
+
+			-webkit-transform: scale(.55);
+
+			        transform: scale(.55);
 			}
 	}
 
