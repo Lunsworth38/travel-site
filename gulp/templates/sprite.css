@@ -8,4 +8,12 @@ Instead edit gulp/templates/sprite */
 		background-image: url("/assets/images/sprites/{{{sprite}}}");
 		background-position: {{position.relative.xy}};
 	}
+
+	.no-svg .icon--{{base}} {
+		width: {{width.outer}}px;
+		height: {{height.outer}}px;
+		background-image: url("/assets/images/sprites/{{#replaceSvgWithPng}}{{{sprite}}}{{/replaceSvgWithPng}}");
+		background-position: {{position.relative.xy}};
+
+	}
 {{/shapes}}
